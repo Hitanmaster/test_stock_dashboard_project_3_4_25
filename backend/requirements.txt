@@ -1,4 +1,6 @@
-Flask>=2.0 # Specify versions if needed
-yfinance>=0.2
-pandas>=1.3
-Flask-Cors>=3.0
+Flask
+Flask-Cors
+yfinance
+python-dotenv
+pandas
+numpy
