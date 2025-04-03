@@ -1,11 +1,21 @@
 # --- Imports ---
 import yfinance as yf
+from dotenv import load_dotenv
 from flask import Flask, jsonify, Response, request
 from flask_cors import CORS # Import CORS
 import pandas as pd
 import logging
 from datetime import datetime, timedelta
 import sys # To check Python version
+
+load_dotenv()
+
+FRONTEND_PORT = os.getenv("FRONTEND_PORT")
+BACKEND_PORT = os.getenv("BACKEND_PORT")
+
+if not FRONTEND_PORT or not BACKEND_PORT:
+    raise ValueError("FRONTEND_PORT or BACKEND_PORT environment variables not set.")
+
 
 # --- Version Check ---
 # yfinance often requires newer Python versions
