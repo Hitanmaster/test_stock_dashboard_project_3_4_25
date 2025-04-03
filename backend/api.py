@@ -1,4 +1,5 @@
 # --- Imports ---
+import os
 import yfinance as yf
 from dotenv import load_dotenv
 from flask import Flask, jsonify, Response, request
